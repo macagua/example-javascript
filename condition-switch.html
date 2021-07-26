@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript switch Condition</title>
+	<script type="text/javascript">
+		var awards = false;
+
+		switch (awards){
+		  case true: {
+			console.log("You have been awarded..");
+			break;
+		  }
+		  case false: {
+			console.log("You have not been awarded.");
+			break;
+		  }
+		}
+
+		var day = 4;
+
+		switch (day){
+		  case 1: {
+			console.log("Today is Monday.");
+			break;
+		  }
+		  case 2: {
+			console.log("Today is Tuesday.");
+			break;
+		  }
+		  case 3: {
+			console.log("Today is Wednesday.");
+			break;
+		  }
+		  case 4: {
+			console.log("Today is Thursday.");
+			break;
+		  }
+		  case 5: {
+			console.log("Today is Friday.");
+			break;
+		  }
+		  case 6: {
+			console.log("Today is Saturday.");
+			break;
+		  }
+		  case 7: {
+			console.log("Today is Sunday.");
+			break;
+		  }
+		  default:
+			console.log("Weekday not computed.");
+		}
+
+		var age = 15;
+
+		switch (true){
+		  case (age < 18): {
+			console.log("You are minor than 18 years old.");
+			break;
+		  }
+		  case (age > 65): {
+			console.log("You exceeds the allowed age.");
+			break;
+		  }
+		  default:
+			console.log("Age not computed.");
+		}
+
+		console.log("Here is the rest of the program");
+	</script>
+</head>
+<body>
+	<h1>Welcome to my website!</h1>
+</body>
+</html>
