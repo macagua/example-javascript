@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript Traverse Arrays</title>
+	<script type="text/javascript">
+		// Example 1
+		console.log("Example 1");
+		var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+		console.log(days);
+		console.log(days[4]);
+		console.log(days[6]);
+		var length = days.length,
+		    i = 0;
+		for (i; i < length; i++) {
+			console.log(days[i]);
+		}
+
+		// Example of iterate through array or object
+		console.log("Example of iterate through array or object");
+		days.forEach(function(item) {
+			 console.log(item);
+		});
+
+		// Example 3
+		function show_element(item){
+			 console.log(item);
+		}
+		console.log("Example 3");
+		days.forEach(show_element);
+
+		// Example 4
+		console.log("Example 4");
+		for (let day of days) {
+			console.log(day);
+		}
+	</script>
+</head>
+<body>
+	<h1>Welcome to my website!</h1>
+</body>
+</html>
