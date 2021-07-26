@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript Scope of variables</title>
+	<script type="text/javascript">
+		var my_name = "Leonardo";
+		function your_name() {
+			var my_name = "Leonardo Jose";
+			my_lastname = "Caballero Garcia";
+			function your_lastname_again() {
+				console.log("Your lastname again: " + my_lastname);
+			}
+			your_lastname_again();
+		console.log("Your name: " + my_name);
+		}
+		your_name();
+		console.log("Your name: " + my_name);
+		console.log("Your lastname: " + my_lastname);
+	</script>
+</head>
+<body>
+	<h1>Welcome to my website!</h1>
+</body>
+</html>
