@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript Array indexOf method</title>
+	<script type="text/javascript">
+		var colors = ["Yellow", "Blue", "White", "Red"];
+		console.log(colors);
+		console.log("Total colors: " + colors.length);
+		console.log(colors[1]);
+		console.log(colors.indexOf("Blue"));
+		console.log("The '" + colors[1] + "'' Color index is: " + colors.indexOf("Blue"));
+		// Example 2
+		console.log(colors.indexOf("Purple"));
+		console.log(colors.push("Purple"));
+		console.log(colors);
+		console.log("Total colors: " + colors.length);
+		console.log(colors.indexOf("Purple"));
+		// Example 3
+		function remove_element_arrays(item, colors_array) {
+			var index = colors_array.indexOf(item);
+			if (index > -1) {
+				colors_array.splice(index, 1);
+				console.log(colors_array);
+			} else {
+				alert("Not found the element!");
+			}
+		}
+		remove_element_arrays(colors[3], colors)
+	</script>
+</head>
+<body>
+	<h1>Welcome to my website!</h1>
+</body>
+</html>
