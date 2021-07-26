@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript Arrays Methods</title>
+	<script type="text/javascript">
+		var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+		console.log(days);
+		console.log("Total weekdays: " + days.length);
+		first_day = days.shift();
+		console.log(days);
+		console.log(first_day);
+		console.log("Total weekdays: " + days.length);
+		last_day = days.pop();
+		console.log(days);
+		console.log(last_day);
+		console.log("Total weekdays: " + days.length);
+		add_last_day_again = days.push(last_day);
+		console.log(days);
+		console.log(add_last_day_again);
+		console.log("Total weekdays: " + days.length);
+		day_splice = days.splice(1, 1);
+		console.log(days);
+		console.log(day_splice);
+		console.log("Total weekdays: " + days.length);
+		delete_last_day = days.pop();
+		add_first_day_again = days.splice(0, 0, first_day);
+		add_day_splice_again = days.splice(2, 0, "Wednesday");
+		add_last_day_again = days.splice(7, 0, last_day);
+		console.log(days);
+		console.log("Total weekdays: " + days.length);
+	</script>
+</head>
+<body>
+	<h1>Welcome to my website!</h1>
+</body>
+</html>
