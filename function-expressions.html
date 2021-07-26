@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript Functional Expressions</title>
+	<script type="text/javascript">
+		// Example 1
+		declared_function();
+		function declared_function() {
+			console.log("Declared function");
+		}
+
+		// Example 2
+		var functional_expression = function () {
+			console.log("This is a Functional Expression");
+		}
+		functional_expression();
+
+		// Example 3
+		var array = [1, 2, 3, 4, 5];
+		array.forEach(function(item){
+			console.log("The Array element: " + item);
+		});
+
+		// Example 4 of Inmendiately Invocked Function Expession - IIFE
+		(function() {
+			console.log("Hello from a IIFE");
+		})();
+
+		// Example 5
+		var array = [
+			function greet(){alert("Hello Javascript");console.log("Hello Javascript");},
+		];
+		console.log(array[0]);
+		(array[0])();
+
+		// Example - jQuery anonymous function
+		/*
+		$(document).ready(function(){
+			// 
+		});
+		*/
+	</script>
+</head>
+<body>
+	<h1>Welcome to my website!</h1>
+</body>
+</html>
