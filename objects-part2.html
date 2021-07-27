@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Javascript Objects with Literal expression</title>
+    <script type="text/javascript">
+        // Example 1 - Object Literal expression
+        var commet = "It's a of my favorites books."
+        var book = {
+            title: "IT",
+            author: "Stephen King",
+            genre: "Terror",
+            rating: 9,
+            tags: ["Clown", "Horror", "Thriller", "Dark fantasy"],
+            commet: commet,
+            "criticism in general": "Unanimously positive.",
+        }
+        // Access to attributes with dot notation
+        console.log("Access to attributes with dot notation");
+        console.log(commet);
+
+        console.log(book.title);
+        console.log(book.author);
+        console.log(book.genre);
+        console.log(book.rating + "/10");
+        console.log(book.tags);
+        console.log(book.tags[2]);
+        console.log(book.commet);
+
+        // Access to attributes with brackets notation
+        console.log("Access to attributes with brackets notation");
+        console.log(book["commet"]);
+
+        var property = "commet";
+        console.log(book[property]);
+
+        console.log(book["criticism in general"]);
+
+        // Delete to attributes with dot notation
+        console.log("Delete to attributes with dot notation");
+        delete(book.commet);
+        console.log(book.commet);
+
+        for (var property in book){
+            //console.log(property);
+            console.log(property + " : " + book[property]);
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+</body>
+</html>
