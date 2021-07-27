@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Javascript Object this Method</title>
+    <script type="text/javascript">
+        // Example 1
+        console.log("Example 1");
+        var person = {
+            name: 'Leonardo',
+            lastname: 'Caballero',
+            age: 40,
+            occupation: 'Web Developer',
+            city: 'Merida',
+            toWalk: function(){
+                console.log('I am walking.');
+            },
+            toGreet: function(){
+                console.log('Hello Guys, my name is ' + this.name + '.');
+            },
+        }
+
+        person.toWalk();
+        person.toGreet();
+
+        var name = 'Jose';
+        var otherFunction = person.toGreet;
+        otherFunction();
+
+        // Example 2
+        console.log("Example 2");
+        var macagua = {
+            name: 'Leonardo',
+            lastname: 'Caballero',
+            age: 40,
+            occupation: 'Web Developer',
+            city: 'Merida',
+            toWalk: function(){
+                console.log('I am walking.');
+            },
+            toGreet: function(){
+                console.log('Hi, I am Macagua, my real name is ' + this.name + '.');
+
+                /*
+                function myFunction(){
+                    console.log(this.name);
+                }
+                */
+                var myFunction = function(){
+                    console.log(this.name);
+                }.bind(this);
+
+                myFunction();
+            },
+        }
+
+        macagua.toGreet();
+    </script>
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+</body>
+</html>
