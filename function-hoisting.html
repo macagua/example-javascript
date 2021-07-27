@@ -6,14 +6,14 @@
     <script type="text/javascript">
         // Example 1
         console.log("Example 1");
-        declared_function();
-        function declared_function() {
+        declaredFunction();
+        function declaredFunction() {
             console.log("Declared function");
         }
 
         // Example 2
         console.log("Example 2");
-        function sum_squares(a, b) {
+        function sumSquares(a, b) {
             //var x = sums((a * a) + (b * b));
             var x = sums(a * a + b * b);
             return x;
@@ -23,11 +23,11 @@
                 return a;
             }
         }
-        console.log("Squares Sum: " + sum_squares(123, 456));
+        console.log("Squares Sum: " + sumSquares(123, 456));
 
         // Example 3
         console.log("Example 3");
-        function sum_squares_js(a, b) {
+        function sumSquaresJS(a, b) {
             var x = undefined;
 
             function sums(c, d) {
@@ -39,91 +39,91 @@
 
             return x;
         }
-        console.log("Squares Sum: " + sum_squares_js(789, 852));
+        console.log("Squares Sum: " + sumSquaresJS(789, 852));
 
         // Example 4
         console.log("Example 4");
-        function get_number() {
+        function getNumber() {
 
-            function get_return_number() {
+            function getReturnNumber() {
                 return 80;
             }
 
-            return get_return_number();
+            return getReturnNumber();
 
-            function get_return_number() {
+            function getReturnNumber() {
                 return 50;
             }
         }
-        console.log("Get number: " + get_number());
+        console.log("Get number: " + getNumber());
 
         // Example 5
         console.log("Example 5");
-        function get_number() {
+        function getNumber() {
 
-            function get_return_number() {
+            function getReturnNumber() {
                 return 80;
             }
 
-            function get_return_number() {
+            function getReturnNumber() {
                 return 50;
             }
 
-            return get_return_number();
+            return getReturnNumber();
         }
-        console.log("Get number: " + get_number());
+        console.log("Get number: " + getNumber());
 
         // Example 5
         console.log("Example 5");
-        function get_number() {
+        function getNumber() {
 
-            var return_number = function () {
+            var returnNumber = function () {
                 return 80;
             }
 
-            return return_number();
+            return returnNumber();
 
-            var return_number = function () {
+            var returnNumber = function () {
                 return 50;
             }
         }
-        console.log("Get number: " + get_number());
+        console.log("Get number: " + getNumber());
 
         // Example 6
         console.log("Example 6");
-        function get_number() {
+        function getNumber() {
 
-            var return_number = undefined;
-            var return_number = undefined;
+            var returnNumber = undefined;
+            var returnNumber = undefined;
 
-            return_number = function () {
+            returnNumber = function () {
                 return 80;
             }
 
-            return return_number();
+            return returnNumber();
 
-            return_number = function () {
+            returnNumber = function () {
                 return 50;
             }
         }
-        console.log("Get number: " + get_number());
+        console.log("Get number: " + getNumber());
 
         // Example 7
         /*
         console.log("Example 7");
-        function get_number() {
+        function getNumber() {
 
-            return return_number();
+            return returnNumber();
 
-            var return_number = function () {
+            var returnNumber = function () {
                 return 80;
             }
 
-            var return_number = function () {
+            var returnNumber = function () {
                 return 50;
             }
         }
-        console.log("Get number: " + get_number());
+        console.log("Get number: " + getNumber());
         */
     </script>
 </head>
