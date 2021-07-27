@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Javascript Closures Functions</title>
+    <script type="text/javascript">
+        // Example 1
+        console.log("Example 1");
+        function function1() {
+            var internalVariable = 1;
+
+            function internalFunction() {
+                console.log("value from outside of internal function: " + internalVariable);
+            }
+
+            return internalFunction;
+        }
+
+        var externalVariable = function1()
+        console.log(externalVariable);
+        externalVariable();
+
+        // Example 2
+        console.log("Example 2");
+        function function2() {
+            var internalVariable = 2;
+
+            function internalFunction() {
+                console.log(internalVariable);
+            }
+
+            externalFunction(internalFunction);
+        }
+
+        function externalFunction(fnt) {
+            fnt();
+
+        }
+
+        function2();
+
+        // Example 3
+        console.log("Example 3");
+        function wait(message) {
+            setTimeout(function(){
+                console.log(message);
+            }, 2000)
+        }
+        wait("Hello, and wait please!");
+    </script>
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+</body>
+</html>
