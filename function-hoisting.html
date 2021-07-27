@@ -1,133 +1,133 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Javascript Hoisting Function</title>
-	<script type="text/javascript">
-		// Example 1
-		console.log("Example 1");
-		declared_function();
-		function declared_function() {
-			console.log("Declared function");
-		}
+    <meta charset="utf-8">
+    <title>Javascript Hoisting Functions</title>
+    <script type="text/javascript">
+        // Example 1
+        console.log("Example 1");
+        declared_function();
+        function declared_function() {
+            console.log("Declared function");
+        }
 
-		// Example 2
-		console.log("Example 2");
-		function sum_squares(a, b) {
-			//var x = sums((a * a) + (b * b));
-			var x = sums(a * a + b * b);
-			return x;
+        // Example 2
+        console.log("Example 2");
+        function sum_squares(a, b) {
+            //var x = sums((a * a) + (b * b));
+            var x = sums(a * a + b * b);
+            return x;
 
-			function sums(c, d) {
-				var a = c + d;
-				return a;
-			}
-		}
-		console.log("Squares Sum: " + sum_squares(123, 456));
+            function sums(c, d) {
+                var a = c + d;
+                return a;
+            }
+        }
+        console.log("Squares Sum: " + sum_squares(123, 456));
 
-		// Example 3
-		console.log("Example 3");
-		function sum_squares_js(a, b) {
-			var x = undefined;
+        // Example 3
+        console.log("Example 3");
+        function sum_squares_js(a, b) {
+            var x = undefined;
 
-			function sums(c, d) {
-				var a = c + d;
-				return a;
-			}
+            function sums(c, d) {
+                var a = c + d;
+                return a;
+            }
 
-			x = sums(a * a + b * b);
+            x = sums(a * a + b * b);
 
-			return x;
-		}
-		console.log("Squares Sum: " + sum_squares_js(789, 852));
+            return x;
+        }
+        console.log("Squares Sum: " + sum_squares_js(789, 852));
 
-		// Example 4
-		console.log("Example 4");
-		function get_number() {
+        // Example 4
+        console.log("Example 4");
+        function get_number() {
 
-			function get_return_number() {
-				return 80;
-			}
+            function get_return_number() {
+                return 80;
+            }
 
-			return get_return_number();
+            return get_return_number();
 
-			function get_return_number() {
-				return 50;
-			}
-		}
-		console.log("Get number: " + get_number());
+            function get_return_number() {
+                return 50;
+            }
+        }
+        console.log("Get number: " + get_number());
 
-		// Example 5
-		console.log("Example 5");
-		function get_number() {
+        // Example 5
+        console.log("Example 5");
+        function get_number() {
 
-			function get_return_number() {
-				return 80;
-			}
+            function get_return_number() {
+                return 80;
+            }
 
-			function get_return_number() {
-				return 50;
-			}
+            function get_return_number() {
+                return 50;
+            }
 
-			return get_return_number();
-		}
-		console.log("Get number: " + get_number());
+            return get_return_number();
+        }
+        console.log("Get number: " + get_number());
 
-		// Example 5
-		console.log("Example 5");
-		function get_number() {
+        // Example 5
+        console.log("Example 5");
+        function get_number() {
 
-			var return_number = function () {
-				return 80;
-			}
+            var return_number = function () {
+                return 80;
+            }
 
-			return return_number();
+            return return_number();
 
-			var return_number = function () {
-				return 50;
-			}
-		}
-		console.log("Get number: " + get_number());
+            var return_number = function () {
+                return 50;
+            }
+        }
+        console.log("Get number: " + get_number());
 
-		// Example 6
-		console.log("Example 6");
-		function get_number() {
+        // Example 6
+        console.log("Example 6");
+        function get_number() {
 
-			var return_number = undefined;
-			var return_number = undefined;
+            var return_number = undefined;
+            var return_number = undefined;
 
-			return_number = function () {
-				return 80;
-			}
+            return_number = function () {
+                return 80;
+            }
 
-			return return_number();
+            return return_number();
 
-			return_number = function () {
-				return 50;
-			}
-		}
-		console.log("Get number: " + get_number());
+            return_number = function () {
+                return 50;
+            }
+        }
+        console.log("Get number: " + get_number());
 
-		// Example 7
-		/*
-		console.log("Example 7");
-		function get_number() {
+        // Example 7
+        /*
+        console.log("Example 7");
+        function get_number() {
 
-			return return_number();
+            return return_number();
 
-			var return_number = function () {
-				return 80;
-			}
+            var return_number = function () {
+                return 80;
+            }
 
-			var return_number = function () {
-				return 50;
-			}
-		}
-		console.log("Get number: " + get_number());
-		*/
-	</script>
+            var return_number = function () {
+                return 50;
+            }
+        }
+        console.log("Get number: " + get_number());
+        */
+    </script>
 </head>
 <body>
-	<h1>Welcome to my website!</h1>
+    <h1>Welcome to my website!</h1>
 </body>
 </html>
