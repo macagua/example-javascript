@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Javascript Object inheritance</title>
     <script type="text/javascript">
-        Object.prototype.getValue = function (){
         // Example 1
         console.log("Example 1");
         var person = {
@@ -40,6 +39,7 @@
 
         // Example 3
         console.log("Example 3");
+        Object.prototype.getValue = function (){
             console.log('Hello Object.prototype, my name is ' + this.name + '.');
         }
         person.getValue();
