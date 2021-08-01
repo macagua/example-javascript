@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Javascript Object inheritance</title>
+    <script type="text/javascript">
+        Object.prototype.getValue = function (){
+        // Example 1
+        console.log("Example 1");
+        var person = {
+            name: 'Leonardo',
+            lastname: 'Caballero',
+            age: 40,
+            occupation: 'Web Developer',
+            city: 'Merida',
+            toWalk: function(){
+                console.log('I am walking.');
+            },
+            toGreet: function(){
+                console.log('Hello Guys, my name is ' + this.name + '.');
+            }, 
+        }
+
+        person.toWalk();
+        person.toGreet();
+        console.log("'person' Object has Own Property 'name'?:", person.hasOwnProperty('name'));
+        console.log("'person' Object has Own Property 'toString'?:", person.hasOwnProperty('toString'));
+
+        // Example 2
+        console.log("Example 2");
+        var person2 = {
+            name: 'Jose',
+            lastname: 'Garcia',
+            age: 40,
+            occupation: 'Web Developer',
+            city: 'Maracaibo',
+        }
+        //person2.toGreet();
+        console.log("'person2' Object has Own Property 'toGreet'?:", person2.hasOwnProperty('toGreet'));
+
+        // Example 3
+        console.log("Example 3");
+            console.log('Hello Object.prototype, my name is ' + this.name + '.');
+        }
+        person.getValue();
+        console.log("'person' Object has Own Property 'getValue'?:", person.hasOwnProperty('getValue'));
+        person2.getValue();
+        console.log("'person2' Object has Own Property 'getValue'?:", person2.hasOwnProperty('getValue'));
+    </script>
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+</body>
+</html>
