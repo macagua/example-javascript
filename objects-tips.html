@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Javascript Object Tips</title>
+    <script type="text/javascript">
+        // Example 1 - Object.create
+        console.log("Example 1 - Object.create");
+        var BF = {
+            title: "Battlefield",
+            genere: "FPS",
+            play: function(){
+                console.log("Estoy jugando a " + this.title);
+            }
+        };
+        var BF1 = Object.create(BF);
+        BF1['version'] = "Battlefield 1";
+        console.log(BF1);
+        console.log(BF1.play);
+        console.log(BF1.play());
+        console.log("'BF' is prototype of 'BF1'?: " + BF.isPrototypeOf(BF1));
+        console.log("'Object.prototype' is prototype of 'BF'?: " + Object.prototype.isPrototypeOf(BF1));
+
+        // Example 2 - Sugar syntax for Object.create
+        console.log("Example 2 - Sugar syntax for Object.create");
+        var object1 = {};
+        var object2 = Object.create(Object.prototype);
+        console.log("'Object.prototype' is prototype of 'object1'?: " + Object.prototype.isPrototypeOf(object1));
+        console.log("'Object.prototype' is prototype of 'object2'?: " + Object.prototype.isPrototypeOf(object2));
+
+        // Example 3 - New Object
+        console.log("Example 3 - New Object");
+        function COD() {
+            this.title = 'Call of Duty';
+            this.genere = 'FPS';
+        }
+        COD.prototype.play = function(){
+                console.log("Estoy jugando a " + this.title);
+        };
+        var IW = new COD();
+        IW['version'] = 'Infinite Warfare';
+        console.log("'COD' is prototype of 'IW'?: " + COD.isPrototypeOf(IW));
+        console.log(IW);
+    </script>
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+</body>
+</html>
