@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Javascript Promises</title>
+    <script type="text/javascript">
+        // Example 1
+        console.log("Example 1")
+        let purchase = "🛒"
+
+        function doThePurchase(callback) {
+            setTimeout(function() {
+                purchase += "📦"
+                callback()
+            }, 2000)
+        }
+
+        doThePurchase(function() {
+            console.log(purchase)
+
+            doThePurchase(function() {
+                console.log(purchase)
+
+                doThePurchase(function() {
+                    console.log(purchase)
+
+                    doThePurchase(function() {
+                        console.log(purchase)
+                    })
+
+                })
+
+            })
+
+        })
+
+        // Example 2
+        console.log("Example 2")
+        let development = new Promise(function(resolve, reject) {
+            // Actions necessary to achieve the satisfactory result
+            setTimeout(() => {
+                const project = "📦"
+                let randomNumber = Math.random()
+                if (randomNumber < 0.4) {
+                    resolve(project) // Successful Promise Result
+                } else {
+                    reject("🚨 not delivered on time 😭") // Failed Result of Promise
+                }
+            }, 1500)
+        })
+
+        // Promise Consumer
+        development
+            .then((project) => console.log(project))
+            .catch((error) => console.log(error))
+            .finally(() => console.log("Promise completed 🥳 🥳 🥳 "))
+
+        // Example 3
+        console.log("Example 3")
+        let purchaseNew = "🛒"
+
+        function doThePurchaseAgain() {
+            return new Promise(function(resolve) {
+                // Actions necessary to achieve the satisfactory result
+                setTimeout(function() {
+                    purchaseNew += "🎁"
+                    console.log(purchaseNew)
+                    resolve()
+                }, 3000)
+            })
+        }
+
+        // Promise Consumer
+        doThePurchaseAgain()
+            .then(() => doThePurchaseAgain())
+            .then(() => doThePurchaseAgain())
+            .then(() => doThePurchaseAgain())
+
+        function timer(time) {
+            // Actions necessary to achieve the satisfactory result
+            return new Promise(function(resolve) {
+                setTimeout(() => resolve(), time)
+            })
+        }
+
+        // Promise Consumer
+        timer(2000)
+            .then(() => console.log("End timer"))
+    </script>
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+</body>
+</html>
