@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Introduction to Frontend Web Development</title>
+</head>
+<body>
+    <h1>Your First JavaScript Program 🔥</h1>
+    <article class="greeting">
+        <h3 id="h2">What's your name?</h2>
+        <h2 id="h1">...</h1>
+        <button id="button">Enter your name</button>
+    </article>
+    <script type="text/javascript">
+        // Listen to the button click event
+        const button = document.getElementById("button")
+        button.addEventListener("click", askTheName)
+        
+        // Save reference of heading elements
+        const h1 = document.getElementById("h1")
+        const h2 = document.getElementById("h2")
+
+        // Prompt and save the value of the "name" to the user
+        function askTheName() {
+            const name = prompt("Enter your name: ")
+            console.log(name)
+            showTheName(name)
+        }
+        // Insert the name where the points are now ...
+        function showTheName(name) {
+            h1.textContent = name
+            h2.textContent = "Hello 👋"
+        }
+    </script>
+</body>
+</html>
